@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="viaApp">
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+        <link rel="icon" href="data:,">
+        <title>VIA app</title>
+        <script src=".libs/angular/angular.js"></script>
+        <script src=".libs/angular/angular-route.js"></script>
+        <script src=".libs/vue/vue.js"></script>
+        <script src=".libs/vue/vue-router.js"></script>
+        <script src=".libs/vuex/vuex.js"></script>
+
+        <script src="app/app-vuex.js"></script>
+        <script src="app/app-angular.js"></script>
+        <script src="app/app-vue.js"></script>
+    </head>
+    <body>
+        <div ng-controller="tabsController">
+            <button ng-repeat="tab in tabs" ng-click="onClick(tab)">{{tab}}</button>
+        </div>
+        <div ng-view></div>
+  </body>
+</html>
